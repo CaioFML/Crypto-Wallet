@@ -45,6 +45,7 @@ group :development, :test do
   gem "rubocop-performance"
   gem "rubocop-rspec"
   gem "rubocop-rails"
+  gem 'rubycritic'
   gem "brakeman"
   gem "rspec-rails"
   gem "rspec_api_documentation"
