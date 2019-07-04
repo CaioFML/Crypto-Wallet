@@ -1,5 +1,6 @@
 class CoinsController < ApplicationController
-  before_action :set_coin, only: [:show, :edit, :update, :destroy]
+  before_action :set_coin, only: %I[show edit update destroy]
+  before_action :set_mining_type_options, only: %I[new create edit update]
 
   # GET /coins
   # GET /coins.json
@@ -10,6 +11,7 @@ class CoinsController < ApplicationController
   # GET /coins/1
   # GET /coins/1.json
   def show
+    @coins = Coin.all
   end
 
   # GET /coins/new
@@ -71,5 +73,9 @@ class CoinsController < ApplicationController
     def coin_params
       params.require(:coin).permit(:description, :acronym, :url_image,
                                    :mining_type_id)
+    end
+
+    def set_mining_type_options
+      @mining_type_options = MiningType.all.pluck(:description, :id)
     end
 end
