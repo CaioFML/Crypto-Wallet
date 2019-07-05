@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class:"form-control", placeholder:"Adicione um Tipo de Mineração..." %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :acronym %>
-    <%= form.text_field :acronym %>
+    <%= form.text_field :acronym, class:"form-control", placeholder:"Adicione uma Sigla..." %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit(class:"btn btn-primary") %>
   </div>
 <% end %>
+
+</br>

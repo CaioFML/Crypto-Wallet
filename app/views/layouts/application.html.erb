@@ -6,7 +6,6 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -14,8 +13,17 @@
   </head>
 
   <body>
-  <h1>Controle feito pelo: <strong><%= params[:controller] %></strong></h1>
-    <%= yield %>
-    <script>$.notify("FUNCIONOU!", "success")</script>
+  <div class="container-fluid">
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <p><%= link_to 'Português', root_path(locale: 'pt-BR'), class:"nav-link" %></p>
+      </li>
+      <li class="nav-item">
+        <p><%= link_to 'English', root_path(locale: 'en'), class:"nav-link" %></p>
+      </li>
+    </ul>
+    <h1>Controle feito pelo: <strong><%= params[:controller] %></strong></h1>
+      <%= yield %>
+  </div>
   </body>
 </html>

@@ -32,6 +32,26 @@
 en:
   hello: "Hello world"
   actual_locale: English(internacional)
+  welcome: "Welcome!!!"
+  messages:
+    welcome: "This is the Crypto Walle, an app that you can register and keep up with your cryptocoins."
+    menu: "To start, choose an option below:"
+    confirm: "Are you sure?"
+  links:
+    edit: "Edit"
+    show: "Show"
+    delete: "Delete"
+    new: "New"
+    back: "Back"
+  new:
+    coin: "New Coin"
+    mining_type: "New Mining Type"
+  editing:
+    coin: "Editing Coin"
+    mining_type: "Editing Mining Type"
+  showing:
+    coin: "Showing Coin"
+    mining_type: "Showing Mining Type"
   activerecord:
     errors:
       messages:
@@ -42,10 +62,10 @@ en:
     models:
       coin:
         one: Coin
-        others: Coins
+        other: Coins
       mining_type:
         one: Mining type
-        others: Mining types
+        other: Mining types
       attributes:
         coin:
           id: id

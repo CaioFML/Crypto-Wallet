@@ -1,19 +1,8 @@
-<p><%= link_to 'Português', root_path(locale: 'pt-BR') %></p>
-<p><%= link_to 'English', root_path(locale: 'en') %></p>
-<h1>BEM VINDO!</h1>
-
-<p>O idioma utilizado nessa aplicação é: <strong><%= t(:actual_locale) %></p></strong>
-
-<p><strong><%= I18n.l(Date.today) %></strong></p>
-
-<%= cookies[:curso] %>
-
-<%= render "menu" %>
-
-<p>
-  Você está em ambiente de: <strong><%= ambiente_rails %></strong>
-</p>
-
-<p>
-  Esta é a variavel de ambiente @nome: <strong><%= @nome %></strong>
-</p>
+<div class="jumbotron">
+  <h1 class="display-4"><%= t('welcome') %></h1>
+  <p><strong><%= I18n.l(Date.today) %></strong></p>
+  <p class="lead"><%= t('messages.welcome') %></p>
+  <hr class="my-4">
+  <p><%= t('messages.menu') %></p>
+  <%= render "menu" %>
+</div>
